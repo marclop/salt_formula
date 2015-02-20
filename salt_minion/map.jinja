@@ -1,0 +1,8 @@
+{%- set salt_minion = salt['grains.filter_by']({
+  'RedHat': {
+    'pkg': 'salt-minion',
+    'service': 'salt-minion',
+    'conf_path': '/etc/salt/minion',
+    'enabled': True,
+  }
+}, merge=salt['pillar.get']('salt_minion')) %}

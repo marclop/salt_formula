@@ -1,0 +1,8 @@
+salt_minion:
+  pkg: salt-minion
+  service: salt-minion
+  conf_path: /etc/salt/minion
+  conf_include_dir: /etc/salt/minion.d
+  version: 2014.7.1
+  enabled: True
+  master: salt.domain
